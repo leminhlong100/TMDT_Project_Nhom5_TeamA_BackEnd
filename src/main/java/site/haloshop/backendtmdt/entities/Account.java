@@ -64,7 +64,7 @@ public class Account {
     @Column(name = "numberloginfail", columnDefinition = "int default '0'")
     private Integer numberloginfail;
 
-    public Account(String accountName, String fullName,String password,String email, String image, String idOther,Date createAt) {
+    public Account(String accountName, String fullName,String password,String email, String image, String idOther,Date createAt,Integer type) {
         this.accountName = accountName;
         this.fullName = fullName;
         this.password = password;
@@ -72,6 +72,7 @@ public class Account {
         this.image = image;
         this.idOther = idOther;
         this.createAt = createAt;
+        this.type = type;
     }
 
     public Account() {

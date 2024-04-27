@@ -163,7 +163,7 @@ public class SocialUser {
         this.timestamp = timestamp;
     }
 
-    public SocialUser(String accountName, String fullName, String password, String email, String image, String idOther, Date create_At) {
+    public SocialUser(String accountName, String fullName, String password, String email, String image, String idOther, Date create_At, Integer type) {
         this.accountName = accountName;
         this.fullName = fullName;
         this.password = password;
@@ -171,5 +171,6 @@ public class SocialUser {
         this.image = image;
         this.idOther = idOther;
         this.create_at = create_At;
+        this.type =type;
     }
 }
