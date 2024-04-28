@@ -37,7 +37,7 @@ public class Account {
     @Column(name = "isActive", columnDefinition = "varchar(1) default '1'")
     private String isActive;
 
-    @Column(name = "createAt", nullable = false, columnDefinition = "datetime default current_timestamp")
+    @Column(name = "createAt",nullable = false, columnDefinition = "datetime default current_timestamp")
     private Date createAt;
 
     @Column(name = "image")
@@ -63,4 +63,19 @@ public class Account {
 
     @Column(name = "numberloginfail", columnDefinition = "int default '0'")
     private Integer numberloginfail;
+
+    public Account(String accountName, String fullName,String password,String email, String image, String idOther,Date createAt,Integer type) {
+        this.accountName = accountName;
+        this.fullName = fullName;
+        this.password = password;
+        this.email = email;
+        this.image = image;
+        this.idOther = idOther;
+        this.createAt = createAt;
+        this.type = type;
+    }
+
+    public Account() {
+
+    }
 }
