@@ -1,9 +1,7 @@
 package site.haloshop.backendtmdt.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import site.haloshop.backendtmdt.dto.ProductDto;
 import site.haloshop.backendtmdt.entities.Product;
 import site.haloshop.backendtmdt.exception.AppException;
@@ -27,20 +25,13 @@ public class ProductServiceImpl implements ProductService {
             return ProductMapper.mapToDto(productRepository.findById(idProduct).orElseThrow(()->new AppException(ErrorCode.PRODUCT_NOT_EXIST)));
         } catch (NumberFormatException e) {
             throw new AppException(ErrorCode.INVALID_ID_FORMAT);
-        }catch (DataAccessException e){
-            throw new AppException(ErrorCode.DATABASE_ERROR);
         }
-
     }
 
     @Override
     public List<ProductDto> getAllProduct(){
-      try{
           List<Product> productList = productRepository.findAll();
           return productList.stream().map((ProductMapper::mapToDto)).collect(Collectors.toList());
-      }catch (DataAccessException e){
-          throw new AppException(ErrorCode.DATABASE_ERROR);
-      }
     }
 
     @Override
@@ -54,8 +45,6 @@ public class ProductServiceImpl implements ProductService {
             return productList.stream().map((ProductMapper::mapToDto)).collect(Collectors.toList());
         } catch (NumberFormatException e) {
             throw new AppException(ErrorCode.INVALID_ID_FORMAT);
-        }catch (DataAccessException e){
-            throw new AppException(ErrorCode.DATABASE_ERROR);
         }
 
     }
