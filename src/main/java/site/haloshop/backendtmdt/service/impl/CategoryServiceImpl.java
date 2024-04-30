@@ -8,8 +8,9 @@ import site.haloshop.backendtmdt.mapper.CategoryMapper;
 import site.haloshop.backendtmdt.repository.CategoryRepository;
 import site.haloshop.backendtmdt.service.CategoryService;
 
-import java.util.ArrayList;
+
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -18,10 +19,6 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public List<CategoryDto> getAllCategory() {
         List<Category> categories = categoryRepository.findAll();
-        List<CategoryDto> categoryDtos = new ArrayList<>();
-        for(Category category : categories){
-            categoryDtos.add(CategoryMapper.mapToDto(category));
-        }
-        return categoryDtos;
+        return categories.stream().map((CategoryMapper::mapToDto)).collect(Collectors.toList());
     }
 }
