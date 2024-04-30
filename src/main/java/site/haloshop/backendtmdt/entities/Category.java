@@ -1,12 +1,17 @@
 package site.haloshop.backendtmdt.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 import java.util.List;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "categories")
 @Data
 public class Category {
