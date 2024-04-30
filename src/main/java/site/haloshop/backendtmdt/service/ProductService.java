@@ -8,9 +8,9 @@ import java.util.List;
 
 @Service
 public interface ProductService {
-    public ProductDto findProductById(Long id)throws RuntimeException;
-    public List<ProductDto> getAllProduct()throws RuntimeException;
-    public List<ProductDto> findRelatedProducts(Long idProduct,Long subCategoryId)throws RuntimeException;
+    public ProductDto findProductById(String id);
+    public List<ProductDto> getAllProduct();
+    public List<ProductDto> findRelatedProducts(String idProduct,String subCategoryId);
 
 }
 
