@@ -20,11 +20,11 @@ public class ProductController {
         return ResponseEntity.ok(productService.getAllProduct());
     }
     @GetMapping("/detail/{id}")
-    public ResponseEntity<ProductDto> findProductById(@PathVariable String id){
+    public ResponseEntity<ProductDto> findProductById(@PathVariable Long id){
         return ResponseEntity.ok(productService.findProductById(id));
     }
     @GetMapping("/related")
-    public ResponseEntity<List<ProductDto>> relatedProducts(@RequestParam String idProduct, @RequestParam String subCategoryId){
+    public ResponseEntity<List<ProductDto>> relatedProducts(@RequestParam Long idProduct, @RequestParam Long subCategoryId){
         return ResponseEntity.ok(productService.findRelatedProducts(idProduct,subCategoryId));
     }
 }
