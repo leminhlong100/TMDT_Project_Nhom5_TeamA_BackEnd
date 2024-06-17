@@ -1,13 +1,13 @@
-package site.haloshop.backendtmdt;
+package site.sugarnest.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackEndTmdtApplicationTests {
+class BackEndApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
