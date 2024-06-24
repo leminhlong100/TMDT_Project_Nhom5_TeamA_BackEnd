@@ -7,15 +7,10 @@ spring:
   application:
     name: back-end
   datasource:
-<<<<<<< Updated upstream
-    url: jdbc:mysql://localhost:3306/tmdt
-    username: root
-    password: hcdat1232580
-=======
     url: jdbc:mysql://localhost:3306/sugarnet
     username: root
     password: Linh@27092002
->>>>>>> Stashed changes
+
     driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
     properties:

@@ -82,6 +82,7 @@ public class OrderService implements IOrderService {
             order.setStatusPay("Chưa thanh toán");
         }
         System.out.println(account);
+        order.setTotalPrice(orderRequest.getTotalPrice());
         iorderRepository.save(order);
 
         for (CartItemEntity cartItem : cartItems) {
