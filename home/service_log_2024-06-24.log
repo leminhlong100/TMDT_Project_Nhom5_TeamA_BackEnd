@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2024-06-24 17:41:12.638 [main] INFO  s.s.backend.BackEndApplication StartupInfoLogger - Starting BackEndApplication using Java 19.0.2 with PID 19280 (D:\TMDT_Project_Nhom5_TeamA_BackEnd\build\classes\java\main started by Admin in D:\TMDT_Project_Nhom5_TeamA_BackEnd)
 2024-06-24 17:41:12.640 [main] INFO  s.s.backend.BackEndApplication SpringApplication - No active profile set, falling back to 1 default profile: "default"
 2024-06-24 17:41:13.726 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
@@ -3074,6 +3075,25 @@ java.lang.RuntimeException: Account not found
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+=======
+2024-06-25 00:00:00.005 [scheduling-1] INFO  s.s.b.controllers.LogController LogController - Starting log file check and compression.
+2024-06-25 00:46:22.585 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler site.sugarnest.backend.exception.GlobalExceptionHandler#handlingRuntimeException(RuntimeException)
+java.lang.IllegalStateException: Could not resolve parameter [0] in org.springframework.http.ResponseEntity<site.sugarnest.backend.dto.response.ApiResponse> site.sugarnest.backend.exception.GlobalExceptionHandler.handlingRuntimeException(java.lang.RuntimeException): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:432)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:74)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1357)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+>>>>>>> Stashed changes
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
@@ -3164,6 +3184,7 @@ java.lang.RuntimeException: Account not found
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+<<<<<<< Updated upstream
 	at java.base/java.lang.Thread.run(Thread.java:1589)
 2024-06-24 18:23:26.753 [http-nio-8080-exec-4] ERROR s.s.b.e.GlobalExceptionHandler GlobalExceptionHandler - Exception: 
 java.lang.RuntimeException: Account not found
@@ -3195,6 +3216,26 @@ java.lang.RuntimeException: Account not found
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+=======
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-06-25 00:46:22.590 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver AbstractHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2024-06-25 00:47:05.117 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler site.sugarnest.backend.exception.GlobalExceptionHandler#handlingRuntimeException(RuntimeException)
+java.lang.IllegalStateException: Could not resolve parameter [0] in org.springframework.http.ResponseEntity<site.sugarnest.backend.dto.response.ApiResponse> site.sugarnest.backend.exception.GlobalExceptionHandler.handlingRuntimeException(java.lang.RuntimeException): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:432)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:74)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1357)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+>>>>>>> Stashed changes
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
@@ -3285,6 +3326,7 @@ java.lang.RuntimeException: Account not found
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+<<<<<<< Updated upstream
 	at java.base/java.lang.Thread.run(Thread.java:1589)
 2024-06-24 18:45:55.533 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-24 18:45:55.536 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource HikariDataSource - HikariPool-1 - Shutdown initiated...
@@ -3340,6 +3382,26 @@ java.lang.RuntimeException: Account not found
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+=======
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-06-25 00:47:05.118 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver AbstractHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2024-06-25 00:48:43.419 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler site.sugarnest.backend.exception.GlobalExceptionHandler#handlingRuntimeException(RuntimeException)
+java.lang.IllegalStateException: Could not resolve parameter [0] in org.springframework.http.ResponseEntity<site.sugarnest.backend.dto.response.ApiResponse> site.sugarnest.backend.exception.GlobalExceptionHandler.handlingRuntimeException(java.lang.RuntimeException): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:432)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:74)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1357)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+>>>>>>> Stashed changes
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
@@ -3430,6 +3492,7 @@ java.lang.RuntimeException: Account not found
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+<<<<<<< Updated upstream
 	at java.base/java.lang.Thread.run(Thread.java:1589)
 2024-06-24 18:47:18.686 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-24 18:47:18.688 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource HikariDataSource - HikariPool-1 - Shutdown initiated...
@@ -3485,6 +3548,26 @@ java.lang.RuntimeException: Account not found
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+=======
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-06-25 00:48:43.421 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver AbstractHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2024-06-25 00:51:03.160 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler site.sugarnest.backend.exception.GlobalExceptionHandler#handlingRuntimeException(RuntimeException)
+java.lang.IllegalStateException: Could not resolve parameter [0] in org.springframework.http.ResponseEntity<site.sugarnest.backend.dto.response.ApiResponse> site.sugarnest.backend.exception.GlobalExceptionHandler.handlingRuntimeException(java.lang.RuntimeException): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:432)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:74)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:175)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1357)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1160)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+>>>>>>> Stashed changes
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
@@ -3575,6 +3658,7 @@ java.lang.RuntimeException: Account not found
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+<<<<<<< Updated upstream
 	at java.base/java.lang.Thread.run(Thread.java:1589)
 2024-06-24 18:56:25.949 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-24 18:56:25.951 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource HikariDataSource - HikariPool-1 - Shutdown initiated...
@@ -3611,6 +3695,11 @@ java.lang.RuntimeException: Account not found
 2024-06-24 18:56:54.485 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet FrameworkServlet - Initializing Servlet 'dispatcherServlet'
 2024-06-24 18:56:54.487 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet FrameworkServlet - Completed initialization in 2 ms
 2024-06-24 19:10:41.694 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler site.sugarnest.backend.exception.GlobalExceptionHandler#handlingRuntimeException(RuntimeException)
+=======
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-06-25 00:51:03.161 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver AbstractHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2024-06-25 00:52:14.162 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler site.sugarnest.backend.exception.GlobalExceptionHandler#handlingRuntimeException(RuntimeException)
+>>>>>>> Stashed changes
 java.lang.IllegalStateException: Could not resolve parameter [0] in org.springframework.http.ResponseEntity<site.sugarnest.backend.dto.response.ApiResponse> site.sugarnest.backend.exception.GlobalExceptionHandler.handlingRuntimeException(java.lang.RuntimeException): No suitable resolver
 	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:221)
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)
@@ -3624,8 +3713,13 @@ java.lang.IllegalStateException: Could not resolve parameter [0] in org.springfr
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+<<<<<<< Updated upstream
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+=======
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+>>>>>>> Stashed changes
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
@@ -3650,7 +3744,11 @@ java.lang.IllegalStateException: Could not resolve parameter [0] in org.springfr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+<<<<<<< Updated upstream
 	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:145)
+=======
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:128)
+>>>>>>> Stashed changes
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
@@ -3716,6 +3814,7 @@ java.lang.IllegalStateException: Could not resolve parameter [0] in org.springfr
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+<<<<<<< Updated upstream
 	at java.base/java.lang.Thread.run(Thread.java:1589)
 2024-06-24 19:13:41.804 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-24 19:13:41.806 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource HikariDataSource - HikariPool-1 - Shutdown initiated...
@@ -4072,3 +4171,10 @@ java.lang.IllegalStateException: Could not resolve parameter [0] in org.springfr
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1589)
+=======
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-06-25 00:52:14.162 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver AbstractHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2024-06-25 01:02:18.376 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-25 01:02:18.378 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-25 01:02:18.383 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource HikariDataSource - HikariPool-1 - Shutdown completed.
+>>>>>>> Stashed changes
