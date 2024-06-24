@@ -114,18 +114,23 @@ public class OrderController {
                 .result(totalAmount)
                 .build();
     }
-
     @GetMapping("/revenue")
     @PreAuthorize("hasAuthority('ORDERS_GET')")
     public ApiResponse<Map<String, Double>> getRevenue(@RequestParam("startMonth") int startMonth,
                                                        @RequestParam("startYear") int startYear,
                                                        @RequestParam("endMonth") int endMonth,
-                                                       @RequestParam("endYear") int endYear) {
+                                                       @RequestParam("endYear") int endYear,
+                                                       @RequestParam(value = "viewBy", required = false, defaultValue = "month") String viewBy) {
+        Map<String, Double> revenueData;
+        if ("day".equalsIgnoreCase(viewBy)) {
+            revenueData = iorderService.getDailyRevenue(startMonth, startYear, endMonth, endYear);
+        } else {
+            revenueData = iorderService.getMonthlyRevenue(startMonth, startYear, endMonth, endYear);
+        }
         return ApiResponse.<Map<String, Double>>builder()
                 .code(200)
-                .result(iorderService.getMonthlyRevenue(startMonth, startYear, endMonth, endYear))
+                .result(revenueData)
                 .build();
-
     }
 
     @GetMapping("/revenue-by-category")
