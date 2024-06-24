@@ -47,8 +47,8 @@ dependencies {
     testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.12'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-logging', version: '3.2.4'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-
-
-
+    implementation 'com.cloudinary:cloudinary-http44:1.27.0'
+    implementation 'org.springframework.boot:spring-boot-starter:3.3.0'
+    implementation 'org.apache.commons:commons-compress:1.26.1'
 }
 
