@@ -8,6 +8,7 @@ import site.sugarnest.backend.dto.response.OrderResponse;
 import site.sugarnest.backend.entities.*;
 import site.sugarnest.backend.mapper.IOrderMapper;
 import site.sugarnest.backend.reponsitoties.*;
+import site.sugarnest.backend.service.account.AccountService;
 import site.sugarnest.backend.service.account.IAccountService;
 import site.sugarnest.backend.service.cart.CartService;
 
@@ -30,6 +31,8 @@ public class OrderService implements IOrderService {
 
     @Autowired
     private IOrderRepository iorderRepository;
+    @Autowired
+    private IAccountRepository iAccountRepository;
 
     @Autowired
     private CartService cartService;
@@ -37,6 +40,8 @@ public class OrderService implements IOrderService {
     @Autowired
     private ICartRepository cartRepository;
 
+    @Autowired
+    private AccountService accountService;
 
     @Autowired
     private IOrderMapper orderMapper;
@@ -44,7 +49,21 @@ public class OrderService implements IOrderService {
     @Autowired
     private IInventoryRepository iInventoryRepository;
 
-    @Autowired ISizeColorProductRepository iSizeColorProductRepository;
+    @Autowired
+    ISizeColorProductRepository iSizeColorProductRepository;
+
+    @Override
+    public Double getPoint(){
+        return accountService.getAccount().getPoint();
+    }
+
+    @Override
+    public void setPoint() {
+        AccountEntity account = accountService.getAccount();
+        account.setPoint(0.0);
+        iAccountRepository.save(account);
+    }
+
 
     @Override
     @Transactional
@@ -52,11 +71,17 @@ public class OrderService implements IOrderService {
         CartEntity cart = cartService.getMyCart();
         List<CartItemEntity> cartItems = cart.getCartItems();
         OrderEntity order = getOrderEntity(orderRequest, cart);
-        if (orderRequest.getStatusPay()!=null && orderRequest.getStatusPay().equals("Đã thanh toán")){
+        AccountEntity account = accountService.getAccount();
+        if (orderRequest.getStatusPay() != null && orderRequest.getStatusPay().equals("Đã thanh toán")) {
+            double accountPoint = account.getPoint();
+            double point = order.getTotalPrice() * 0.01;
+            account.setPoint(accountPoint + point);
+            iAccountRepository.save(account);
             order.setStatusPay("Đã thanh toán");
-        }else {
+        } else {
             order.setStatusPay("Chưa thanh toán");
         }
+        System.out.println(account);
         iorderRepository.save(order);
 
         for (CartItemEntity cartItem : cartItems) {
@@ -71,7 +96,7 @@ public class OrderService implements IOrderService {
             Long productId = cartItem.getProductEntity().getId();
             SizeColorProductEntity sizeColorProduct = iSizeColorProductRepository.findByProductEntityIdAndSizeAndColor(productId, cartItem.getProductSize(), cartItem.getProductColor());
             InventoryEntity inventory = sizeColorProduct.getInventoryEntity();
-            if(inventory.getQuantity() < cartItem.getQuantity()){
+            if (inventory.getQuantity() < cartItem.getQuantity()) {
                 return null;
             }
             inventory.setQuantity(inventory.getQuantity() - cartItem.getQuantity());
@@ -79,6 +104,7 @@ public class OrderService implements IOrderService {
             iOrderDetailRepository.save(orderDetail);
             iCartItemRepository.delete(cartItem);
         }
+
         cart.getCartItems().removeAll(cartItems);
         cart.setUpdatedAt(new Date());
         cart.setTotalPrice(0.0);
