@@ -7,9 +7,10 @@ spring:
   application:
     name: back-end
   datasource:
-    url: jdbc:mysql://localhost:3306/tmdt
+    url: jdbc:mysql://localhost:3306/sugarnet
     username: root
-    password: hcdat1232580
+    password: Linh@27092002
+
     driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
     properties:

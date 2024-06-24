@@ -66,5 +66,5 @@ public class ProductEntity {
     @Column(nullable = true,columnDefinition = "TEXT")
     private String borderPath;
     @Column(nullable = true,columnDefinition = "TEXT")
-    private String backgroundPath;
+        private String backgroundPath;
 }

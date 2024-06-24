@@ -1,4 +1,0 @@
-2024-06-25 00:00:00.013 [scheduling-1] INFO  s.s.b.controllers.LogController LogController - Starting log file check and compression.
-2024-06-25 00:01:30.917 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean AbstractEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-25 00:01:30.919 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-06-25 00:01:30.924 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource HikariDataSource - HikariPool-1 - Shutdown completed.

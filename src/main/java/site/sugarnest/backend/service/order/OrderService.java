@@ -93,6 +93,8 @@ public class OrderService implements IOrderService {
             orderDetail.setQuantity(cartItem.getQuantity());
             orderDetail.setProductEntity(cartItem.getProductEntity());
             orderDetail.setOrderEntity(order);
+            orderDetail.setCustomPath(cartItem.getCustomPath());
+            orderDetail.setIsCustom(cartItem.getIsCustom());
             order.getOrderItems().add(orderDetail);
             Long productId = cartItem.getProductEntity().getId();
             SizeColorProductEntity sizeColorProduct = iSizeColorProductRepository.findByProductEntityIdAndSizeAndColor(productId, cartItem.getProductSize(), cartItem.getProductColor());
