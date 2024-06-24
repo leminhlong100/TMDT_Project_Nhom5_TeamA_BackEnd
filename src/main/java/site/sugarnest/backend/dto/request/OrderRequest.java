@@ -17,4 +17,6 @@ public class OrderRequest {
 
     private String statusPay;
 
+    private double totalPrice;
+
 }
